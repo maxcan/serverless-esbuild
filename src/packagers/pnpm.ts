@@ -98,10 +98,11 @@ export class Pnpm implements Packager {
   }
 
   async prune(cwd: string) {
-    const command = /^win/.test(process.platform) ? 'pnpm.cmd' : 'pnpm';
-    const args = ['prune'];
+    console.warn("Skipping prune for pnpm...");
+    // const command = /^win/.test(process.platform) ? 'pnpm.cmd' : 'pnpm';
+    // const args = ['prune'];
 
-    await spawnProcess(command, args, { cwd });
+    // await spawnProcess(command, args, { cwd });
   }
 
   async runScripts(cwd: string, scriptNames: string[]) {
